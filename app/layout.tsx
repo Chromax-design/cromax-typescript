@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import NavComponent from "@/components/NavComponent";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"]
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${josefinSans.className} antialiased`}
       >
-        {children}
+        <div className='bg-black min-h-[100vh]'>
+          <div className='max-w-7xl mx-auto'>
+            <header className='py-4'>
+              <NavComponent />
+            </header>
+            {children}
+            <footer className='text-xs lg:text-sm text-center text-white/45 py-10'>
+              <p>Copyright &copy; {new Date().getFullYear()} All rights reserved | This website was made by Cromax</p>
+            </footer>
+          </div>
+          {/* <ScrollToTop /> */}
+        </div>
       </body>
     </html>
   );
