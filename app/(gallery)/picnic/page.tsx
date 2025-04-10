@@ -4,7 +4,6 @@ import { getImagesFromCloud } from '@/server';
 
 const Picnic = async () => {
     const data = await getImagesFromCloud('picnic');
-    console.log(data)
     return (
         <main className=' my-14 space-y-5 p-3'>
             <TitleComponent title={'picnic gallery'} />
