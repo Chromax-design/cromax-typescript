@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import LightGallery from 'lightgallery/react';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -9,34 +9,15 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { Skeleton } from './ui/skeleton';
 
-type imageEntryType = { imgSrc: string, imgAlt: string }[]
+type ImageGalleryProps = { imageEntries: string[] };
 
-const ImageGallery = ({ imageEntries }: { imageEntries: imageEntryType }) => {
-    const [hasMounted, setHasMounted] = useState(false);
-    const [loadedImages, setLoadedImages] = useState<boolean[]>(
-        Array(imageEntries.length).fill(false)
-    );
-
-    useEffect(() => {
-        setHasMounted(true);
-        setLoadedImages(Array(imageEntries.length).fill(false));
-    }, [imageEntries.length]);
-
-
-    const handleImageLoad = (index: number) => {
-        setLoadedImages(prev => {
-            const updated = [...prev];
-            updated[index] = true;
-            return updated;
-        });
-    };
-
-    if (!hasMounted) return null; // SSR bypass
-
+const ImageGallery = ({ imageEntries }: ImageGalleryProps) => {
+    
     return (
         <section className='grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-5'>
-            {imageEntries.map(({ imgAlt, imgSrc }, index) => {
-                const loaded = loadedImages[index];
+            {imageEntries.map(( url, index) => {
+                const [loaded, setLoaded] = useState(false)
+
                 return (
                     <div
                         className='h-80 overflow-hidden group hover:scale-105 duration-300 ease-in-out relative'
@@ -58,11 +39,11 @@ const ImageGallery = ({ imageEntries }: { imageEntries: imageEntryType }) => {
                             }}
                             preload={2}
                         >
-                            <a href={imgSrc}>
+                            <a href={url}>
                                 <img
-                                    src={imgSrc}
+                                    src={url}
                                     alt={`gallery-${index}`}
-                                    onLoad={() => handleImageLoad(index)}
+                                    onLoad={() => setLoaded(true)}
                                     className={`w-full h-full min-h-80 rounded object-cover object-top transition-all duration-300 ease-in-out
                   saturate-0 brightness-80 
                   ${loaded ? 'group-hover:scale-105 group-hover:cursor-pointer group-hover:saturate-100 group-active:saturate-100 group-active:scale-105' : 'opacity-0'}`}

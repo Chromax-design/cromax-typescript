@@ -8,8 +8,10 @@ cloudinary.config({
 
 export const getImagesFromCloud = async (folderPath: string) => {
     try {
-        const result = await cloudinary.api.resources_by_asset_folder('test', { tags: true, metadata: true })
-        return result;
+        const result = await cloudinary.api.resources_by_asset_folder(folderPath, { tags: false, metadata: false })
+        
+        const imageUrls = result.resources.map((resource: any) => resource.secure_url);
+        return imageUrls;
     } catch (error) {
         console.error('Error fetching images:', error);
     }

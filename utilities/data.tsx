@@ -9,17 +9,17 @@ export const pages: pagesTypes = [
 
 export const HomepageData: HomepageDataType = [
   {
-    coverImg: '/picnic/picnic 35.jpg',
+    coverImg: '/banners/picnic-banner.jpg',
     title: 'picnic',
     link: 'picnic'
   },
   {
-    coverImg: '/funfest/funfest 25.jpg',
+    coverImg: '/banners/funfest-banner.jpg',
     title: 'funfest',
     link: 'funfest'
   },
   {
-    coverImg: '/bfw/bfw 15.jpg',
+    coverImg: '/banners/bfw-banner.jpg',
     title: 'BFW',
     link: 'bfw'
   },
