@@ -1,9 +1,13 @@
 import ImageGallery from '@/components/ImageGallery';
 import TitleComponent from '@/components/TitleComponent'
 import { getImagesFromCloud } from '@/server';
-import React from 'react'
+import { Metadata } from 'next';
 
-const Bfw = async() => {
+export const metadata: Metadata = {
+    title: 'Benin Fashion Week Gallery'
+}
+
+const Bfw = async () => {
     const data = await getImagesFromCloud('bfw');
 
     return (
