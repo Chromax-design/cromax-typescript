@@ -1,5 +1,10 @@
 import TitleComponent from '@/components/TitleComponent'
+import { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+    title: 'About'
+}
 
 const About = () => {
     return (

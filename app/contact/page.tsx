@@ -16,6 +16,11 @@ import { Input } from "@/components/ui/input"
 import TitleComponent from '@/components/TitleComponent'
 import SocialMedia from '@/components/SocialMedia'
 import { Textarea } from "@/components/ui/textarea"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: 'Contact'
+}
 
 const FormSchema = z.object({
     firstName: z.string().min(2, {
