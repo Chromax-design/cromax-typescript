@@ -11,11 +11,15 @@ import {
 } from '@react-email/components';
 
 interface SendMailTemplateProps {
+  fullName?: string;
+  senderEmail?: string;
   subjectText?: string;
   message?: string;
 }
 
 export const SendMailTemplate = ({
+  fullName,
+  senderEmail,
   subjectText,
   message,
 }: SendMailTemplateProps) => {
@@ -25,6 +29,14 @@ export const SendMailTemplate = ({
       <Body style={main}>
         <Preview className=' text-xl capitalize'>{`Subject - ${subjectText}`}</Preview>
         <Container style={container}>
+          <Section style={{ paddingBottom: '20px' }}>
+            <Row>
+              <Text style={paragraph}>
+                <b>Name:</b> {fullName}<br />
+                <b>Email:</b> {senderEmail}
+              </Text>
+            </Row>
+          </Section>
           <Section style={{ paddingBottom: '20px' }}>
             <Row>
               <Text style={review}>{message}</Text>
