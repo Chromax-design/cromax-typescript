@@ -1,5 +1,4 @@
 import SendMailTemplate from "@/emails/SendMailTemplate";
-import SendResponseTemplate from "@/emails/SendResponseTemplate";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 

@@ -41,6 +41,7 @@ const ImageGallery = ({ imageEntries }: ImageGalleryProps) => {
                                     className={`w-full h-full min-h-80 rounded object-cover object-top transition-all duration-300 ease-in-out saturate-0 brightness-80 `}
                                     loading='lazy'
                                     quality={65}
+                                    unoptimized={false}
                                 />
                             </a>
                         </LightGallery>

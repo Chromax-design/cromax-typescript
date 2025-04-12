@@ -23,6 +23,16 @@ export const HomepageData: HomepageDataType = [
     title: 'BFW',
     link: 'bfw'
   },
+  {
+    coverImg: '/banners/altefest-banner.jpg',
+    title: 'Altefest 2024',
+    link: 'altefest'
+  },
+  {
+    coverImg: '/banners/devfest-banner.jpg',
+    title: 'Devfest 2024',
+    link: 'devfest24'
+  },
 ]
 
 export const serviceList = [
