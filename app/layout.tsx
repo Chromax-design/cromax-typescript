@@ -3,7 +3,6 @@ import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import NavComponent from "@/components/NavComponent";
 import ToasterProvider from "@/components/ToasterProvider";
-import Link from "next/link";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"]
