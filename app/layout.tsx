@@ -3,6 +3,7 @@ import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import NavComponent from "@/components/NavComponent";
 import ToasterProvider from "@/components/ToasterProvider";
+import Link from "next/link";
 
 const josefinSans = Josefin_Sans({
   subsets: ["latin"]
@@ -18,16 +19,16 @@ export const metadata: Metadata = {
   keywords: 'Cromax, Cromax Photography, documentary photography, fashion photography, event photography, portrait photography, Nigerian photographer, visual storytelling',
   robots: 'index, follow',
   authors: [{ name: 'Cromax' }, { name: 'Ifeivbunu Godskey' }],
-  metadataBase: new URL('https://cromax-typescript.vercel.app'),
+  metadataBase: new URL('https://cromaxlens.vercel.app'),
   openGraph: {
     title: 'Cromax Photography | Capturing Real Moments',
     description:
       'Visual storytelling that goes beyond aesthetics. Experience fashion, culture, and life through the lens of Cromax.',
-    url: 'https://cromax-typescript.vercel.app',
+    url: 'https://cromaxlens.vercel.app',
     siteName: 'Cromax Photography',
     images: [
       {
-        url: 'https://cromax-typescript.vercel.app/banners/banner.png',
+        url: 'https://cromaxlens.vercel.app/banners/banner.jpg',
         width: 1200,
         height: 630,
         alt: 'Cromax Photography Cover',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     description:
       'Experience raw moments, vibrant fashion, and powerful documentary visuals with Cromax.',
     images: [
-      'https://cromax-typescript.vercel.app/banners/banner.png',
+      'https://cromaxlens.vercel.app/banners/banner.jpg',
     ]
   },
 
