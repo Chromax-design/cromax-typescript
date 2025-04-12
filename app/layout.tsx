@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     description:
       'Experience raw moments, vibrant fashion, and powerful documentary visuals with Cromax.',
     images: [
+      'https://res.cloudinary.com/dmgooo1dr/image/upload/v1744451466/banner_ugoqmv.jpg',
       'https://cromaxlens.vercel.app/banners/banner.jpg',
     ]
   },
