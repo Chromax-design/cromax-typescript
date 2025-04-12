@@ -17,10 +17,10 @@ const About = () => {
                 <div className='col-span-12 md:col-span-5 space-y-4 pl-4'>
                     <h2 className='text-white text-2xl md:text-4xl capitalize'>my mission</h2>
                     <p className=' text-white/45 leading-7'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, at laudantium recusandae voluptatem perferendis explicabo reiciendis placeat dicta fugit pariatur vel repellat ipsum fugiat ullam? Fugit nemo in recusandae aperiam autem quae obcaecati odit sint. Non voluptate commodi deleniti ea sed, libero sunt tenetur autem, molestias aliquam, quis veritatis explicabo!
+                        To capture the soul of every moment and preserve it in timeless frames. Through my lens, I strive to tell authentic stories—stories of people, places, emotions, and cultures. Whether it's a quiet glance, a bustling street, or a powerful movement, my mission is to document life as it unfolds—with honesty, creativity, and purpose.
                     </p>
                     <p className=' text-white/45 leading-7'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, at laudantium recusandae voluptatem perferendis explicabo reiciendis placeat dicta fugit pariatur vel repellat ipsum fugiat ullam.
+                        Every photograph is more than an image; it’s a memory, a message, and a legacy. I aim to create visuals that not only speak but also connect—reminding us of who we are, what we value, and the beauty found in the everyday.
                     </p>
                 </div>
             </section>
