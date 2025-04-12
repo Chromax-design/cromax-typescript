@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 
 const Altefest = async () => {
-    const data = await getImagesFromCloud('altefest24');
+    const data = await getImagesFromCloud('altefest');
 
     return (
         <main className=' my-14 space-y-5 p-3'>
