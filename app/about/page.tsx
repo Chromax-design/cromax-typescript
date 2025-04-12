@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const About = () => {
     return (
-        <main className='my-14 space-y-5 p-4 lg:p-2'>
+        <main className='my-14 space-y-5 p-4 max-w-6xl lg:p-2 mx-auto'>
             <TitleComponent title={'About'} />
             <section className='grid grid-cols-12 gap-5'>
                 <div className='col-span-12 md:col-span-7'>

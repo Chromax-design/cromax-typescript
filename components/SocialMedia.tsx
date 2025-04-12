@@ -10,10 +10,10 @@ const socialLinks = [
         icon: <FaWhatsapp />,
         link: "https://wa.me/2349061592634"
     },
-    {
-        icon: <FaInstagram />,
-        link: "#"
-    },
+    // {
+    //     icon: <FaInstagram />,
+    //     link: "#"
+    // },
     {
         icon: <FaLinkedin />,
         link: "https://www.linkedin.com/in/ifeivbunu-godskey?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BSSHhB44YRoajRaQVAthsFQ%3D%3D"
