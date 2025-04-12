@@ -23,12 +23,12 @@ const ImageGallery = ({ imageEntries }: ImageGalleryProps) => {
                         <LightGallery
                             speed={500}
                             plugins={[lgThumbnail, lgZoom]}
-                            download={true}
+                            download={false}
                             closable={true}
                             mobileSettings={{
                                 controls: true,
                                 showCloseIcon: true,
-                                download: true,
+                                download: false
                             }}
                             preload={2}
                         >
