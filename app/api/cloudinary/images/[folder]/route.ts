@@ -9,8 +9,8 @@ cloudinary.config({
 });
 
 
-export const GET = async (req: Request, { params }: { params: { folder: string } }) => {
-    const { folder } = params;  
+export const GET = async (req: Request, context: { params: { folder: string } }) => {
+    const { folder } = context.params;  
 
     try {
         const result = await cloudinary.api.resources({
