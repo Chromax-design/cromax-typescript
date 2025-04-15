@@ -10,21 +10,14 @@ cloudinary.config({
 
 
 export const GET = async (req: Request, { params }: any) => {
-    const { folder } = params;  
+    const { folder } = await params;  
 
     try {
-        const result = await cloudinary.api.resources({
-            type: 'upload',
-            prefix: `${folder}`,
-            max_results: 50,
-        });
-
-        const images = result.resources.map((res: any) => ({
-            url: res.secure_url,
-            public_id: res.public_id,
-        }));
-
-        return NextResponse.json(images);
+        const result = await cloudinary.api.resources_by_asset_folder(folder, {
+            tags: false, metadata: false, max_results: 50,
+        })
+        const imageUrls = result.resources.map((resource: any) => resource.secure_url);
+        return NextResponse.json(imageUrls);
     } catch (error) {
         console.error('Error fetching images:', error);
         return NextResponse.json({ error: 'Failed to fetch images from' }, { status: 500 })
