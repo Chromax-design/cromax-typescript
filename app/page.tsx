@@ -3,11 +3,9 @@
 import HomepageCard from "@/components/HomepageCard";
 import Preloader from "@/components/Preloader";
 import { useGetAllProjectsQuery } from "@/services/Projects";
-import { HomepageData } from "@/utilities/data";
 
 const Home = () => {
   const { data: projects, isLoading } = useGetAllProjectsQuery();
-  console.log(projects);
   return (
     <main className="max-md:space-y-7 md:grid grid-cols-[repeat(auto-fit,_minmax(350px,_1fr))] gap-7 text-white p-4">
       {isLoading && <Preloader />}

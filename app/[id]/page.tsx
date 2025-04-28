@@ -18,7 +18,7 @@ const ProjectPage = () => {
   const { data: project, isLoading } = useGetProjectByIdQuery({
     id: id as string,
   });
-  console.log(project);
+
   return (
     <>
       {isLoading && <Preloader />}

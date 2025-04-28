@@ -24,7 +24,7 @@ const HomepageCard = ({
         priority={true}
         blurDataURL={blurDataUrl}
       />
-      <div className=" absolute top-0 left-0 h-full w-full flex justify-center items-center flex-col gap-4">
+      <div className=" absolute top-0 left-0 h-full w-full flex justify-center items-center flex-col gap-4 p-4 text-center">
         <h2 className="text-4xl capitalize">{title}</h2>
         <Link
           href={`/${link}`}

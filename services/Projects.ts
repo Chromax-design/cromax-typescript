@@ -8,7 +8,7 @@ type ProjectWithImage = Prisma.ProjectGetPayload<{
 export const projectApi = createApi({
   reducerPath: "projectApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "/api/",
+    baseUrl: "/api",
   }),
   endpoints: (builder) => ({
     getAllProjects: builder.query<ProjectWithImage[], void>({
