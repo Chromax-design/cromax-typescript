@@ -20,7 +20,7 @@ const Services = () => {
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{duration: 0.8, ease: 'easeOut'}}
-              viewport={{once: false, amount: 0.2}}
+              viewport={{once: true, amount: 0.2}}
               className="text-white bg-neutral-900 p-10 space-y-5 text-center shadow-2xl hover:scale-105 transition-transform"
               key={i}
             >

@@ -12,6 +12,7 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -38,7 +39,15 @@ const ProjectPage = () => {
           >
             {project.Image.map(({ url, thumbnailUrl }, i) => {
               return (
-                <a href={url} className="" key={i}>
+                <motion.a
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  href={url}
+                  className=""
+                  key={i}
+                >
                   <Image
                     alt="img1"
                     src={url}
@@ -47,7 +56,7 @@ const ProjectPage = () => {
                     width={400}
                     height={600}
                   />
-                </a>
+                </motion.a>
               );
             })}
           </LightGallery>
